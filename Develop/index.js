@@ -5,6 +5,7 @@ const questions = [
         type: 'input',
         message: 'What is your Title?',
         name: 'Title',
+        default: 'readme-generator',
     },
     {
         type: 'input',
@@ -35,7 +36,7 @@ const questions = [
         type: 'list',
         name: 'License',
         message: 'License options',
-        choices: ["Blubasaur", "Squirtle", "Charmander"]
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense']
     },
 ];
 
