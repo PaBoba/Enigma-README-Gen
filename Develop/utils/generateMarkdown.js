@@ -119,6 +119,7 @@ function generateMarkdown(data) {
   //license
   draftMarkdown += `
   * [License](#license)`;
+  return draftToC, draftMarkdown;
 }
 
 

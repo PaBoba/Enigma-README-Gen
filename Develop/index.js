@@ -45,6 +45,8 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+    // const newData = JSON.stringify(data);
+    // console.log(typeof newData);
     fs.writeFile(fileName, data, err => {
         if (err) {
           return console.log(err);
@@ -58,11 +60,11 @@ const writeFileAsync = util.promisify(writeToFile);
 // TODO: Create a function to initialize app
 async function init() {
     try {
-
         const data = await inquirer.prompt(questions);
+        // const newData = JSON.stringify(data);
         console.log("Your responses: ", data);
-
-        console.log("Generating your README...")
+        console.log("Generating your README...");
+        console.log(typeof data);
         const markdown = generateMarkdown(data);
         console.log(markdown);
 
