@@ -65,7 +65,7 @@ function generateMarkdown(data) {
   //installation
   if (data.installation !== '') {
 
-    draftMarkdown +=
+  draftMarkdown +=
       `
   
   ## Installation
@@ -82,7 +82,8 @@ function generateMarkdown(data) {
 
 
       `
- ## Usage 
+
+  ## Usage 
   
   *Provide instructions and examples for use. Include screenshots as needed:*
   
@@ -92,33 +93,37 @@ function generateMarkdown(data) {
   //contribution
   if (data.contributing !== '') {
 
-    draftMarkdown +=
+  draftMarkdown +=
 
       `
     
-    ## Contributing
+  ## Contributing
     
-    *If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer*
+  *If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer*
     
-    ${data.contributing}`
+  ${data.contributing}`
   };
 
   //tests
   if (data.tests !== '') {
 
-    draftMarkdown +=
+  draftMarkdown +=
       `
       
-      ## Tests
+  ## Tests
       
-      *Go the extra mile and write tests for your application. Then provide examples on how to run them here:*
+  *Go the extra mile and write tests for your application. Then provide examples on how to run them here:*
       
-      ${data.tests}`
+  ${data.tests}
+  
+  `
+
   };
 
   //license
   draftMarkdown += `
   * [License](#license)`;
+
   return draftToC, draftMarkdown;
 }
 
