@@ -4,7 +4,7 @@ function renderLicenseBadge(license) {
   if (license !== '');
 
   else
-  return '';
+    return '';
 }
 
 // TODO: Create a function that returns the license link
@@ -13,7 +13,7 @@ function renderLicenseLink(license) {
   if (license.link !== '');
 
   else
-  return '';
+    return '';
 }
 
 // TODO: Create a function that returns the license section of README
@@ -22,27 +22,38 @@ function renderLicenseSection(license) {
   if (license.section !== '');
 
   else
-  return '';
+    return '';
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let draftToC = `## Table of Contents`;
 
-  if (data.installation !== '') { draftToC += `
+  if (data.installation !== '') {
+    draftToC += `
   * [Installation](#installation)` };
 
-  if (data.usage !== '') { draftToC += `
+  if (data.usage !== '') {
+    draftToC += `
   * [Usage](#usage)` };
 
-  if (data.contributing !== '') { draftToC += `
+  if (data.contributing !== '') {
+    draftToC += `
   * [Contributing](#contributing)` };
 
-  if (data.tests !== '') { draftToC += `
+  if (data.tests !== '') {
+    draftToC += `
   * [Tests](#tests)` };
+  let draftMarkdown =
+    `# ${data.title}
   
-  return `# ${data.title}
+  Check out the badges hosted by [shields.io](https://shields.io/).
   
+  ## Description 
+  
+  *The what, why, and how of this project:* 
+  
+  ${data.description}
 `;
 }
 
