@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [
@@ -51,9 +52,26 @@ function writeToFile(fileName, data) {
         console.log("Your README.md file has been generated!")
     });
 }
+//using async to help the app run faster
+const writeFileAsync = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    try {
+
+        const data = await inquirer.prompt(questions);
+        console.log("Your responses: ", data);
+
+        console.log("Generating your README...")
+        const markdown = generateMarkdown(data);
+        console.log(markdown);
+
+        await writeFileAsync('GeneratedREADME.md', markdown);
+
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 // Function call to initialize app
 init();
