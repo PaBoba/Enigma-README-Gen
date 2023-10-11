@@ -17,7 +17,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What are the installation insturctions?',
+        message: 'What are the installation instructions?',
         name: 'installation',
     },
     {
@@ -52,7 +52,7 @@ function writeToFile(fileName, data) {
         console.log("Your README.md file has been generated!")
     });
 }
-//using async to help the app run faster
+//using async to help the app run smoother
 const writeFileAsync = util.promisify(writeToFile);
 
 // TODO: Create a function to initialize app

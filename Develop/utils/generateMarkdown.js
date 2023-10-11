@@ -46,7 +46,7 @@ function generateMarkdown(data) {
     draftToC += `
   * [Tests](#tests)` };
 
-  //description
+  //title
   let draftMarkdown =
     `# ${data.title}
 
@@ -104,7 +104,7 @@ function generateMarkdown(data) {
   };
 
   //tests
-  if (userResponses.tests !== '') {
+  if (data.tests !== '') {
 
     draftMarkdown +=
       `
@@ -113,7 +113,7 @@ function generateMarkdown(data) {
       
       *Go the extra mile and write tests for your application. Then provide examples on how to run them here:*
       
-      ${userResponses.tests}`
+      ${data.tests}`
   };
 
   //license
