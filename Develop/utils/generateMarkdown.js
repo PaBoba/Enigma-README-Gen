@@ -27,6 +27,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  //generate TOC
   let draftToC = `## Table of Contents`;
 
   if (data.installation !== '') {
@@ -44,9 +45,11 @@ function generateMarkdown(data) {
   if (data.tests !== '') {
     draftToC += `
   * [Tests](#tests)` };
+
+  //description
   let draftMarkdown =
     `# ${data.title}
-  
+
   Check out the badges hosted by [shields.io](https://shields.io/).
   
   ## Description 
@@ -54,7 +57,69 @@ function generateMarkdown(data) {
   *The what, why, and how of this project:* 
   
   ${data.description}
-`;
+
+  `
+  //TOC
+  draftMarkdown += draftToC;
+
+  //installation
+  if (data.installation !== '') {
+
+    draftMarkdown +=
+      `
+  
+  ## Installation
+  
+  *What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running:*
+
+  ${data.installation}`
+  };
+
+  //usage
+  if (data.usage !== '') {
+
+    draftMarkdown +=
+
+
+      `
+ ## Usage 
+  
+  *Provide instructions and examples for use. Include screenshots as needed:*
+  
+  ${data.usage}`
+  };
+
+  //contribution
+  if (data.contributing !== '') {
+
+    draftMarkdown +=
+
+      `
+    
+    ## Contributing
+    
+    *If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer*
+    
+    ${data.contributing}`
+  };
+
+  //tests
+  if (userResponses.tests !== '') {
+
+    draftMarkdown +=
+      `
+      
+      ## Tests
+      
+      *Go the extra mile and write tests for your application. Then provide examples on how to run them here:*
+      
+      ${userResponses.tests}`
+  };
+
+  //license
+  draftMarkdown += `
+  * [License](#license)`;
 }
+
 
 module.exports = generateMarkdown;
