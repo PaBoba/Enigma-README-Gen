@@ -6,44 +6,51 @@ const questions = [
     {
         type: 'input',
         message: 'What is your Title?',
-        name: 'Title',
+        name: 'title',
         default: 'readme-generator',
     },
     {
         type: 'input',
         message: 'What is yor description?',
-        name: 'Description',
+        name: 'description',
     },
     {
         type: 'input',
         message: 'What are the installation insturctions?',
-        name: 'Installation',
+        name: 'installation',
     },
     {
         type: 'input',
         message: 'What is the usage information?',
-        name: 'Usage',
+        name: 'usage',
     },
     {
         type: 'input',
         message: 'What are the contirubtion guidelines?',
-        name: 'Contributing',
+        name: 'contributing',
     },
     {
         type: 'input',
         message: 'What are the test instructions?',
-        name: 'Tests',
+        name: 'tests',
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'License options',
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense']
     },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Your README.md file has been generated!")
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {}
