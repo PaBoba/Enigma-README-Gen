@@ -1,42 +1,46 @@
-# alsdkfjla;sdjfa
+# Readme Gen
 
   Check out the badges hosted by [shields.io](https://shields.io/).
   
   ## Description 
   
-  *The what, why, and how of this project:* 
   
-  lka;sdjf;alskjf;alkfjd
+  A readme generator that creates a readme for the user.
 
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Tests](#tests)
+  * [License](#license)
   
   ## Installation
   
-  *What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running:*
 
-  lkajsdf;laskjf;aslkfjas;lfdsa
+  Got to github and clone the app to you code editor and run node index.js
 
   ## Usage 
   
-  *Provide instructions and examples for use. Include screenshots as needed:*
   
-  als;kdfjas;lkfjkas;ldjfk
+  run node index.js and enter your inputs
     
   ## Contributing
     
-  *If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer*
     
-  als;dfjkas;klfja;d
+  none
       
   ## Tests
       
-  *Go the extra mile and write tests for your application. Then provide examples on how to run them here:*
       
-  as;dlfkjas;fksad
+  check the generatedMarkdown file to see if your inputs worked
+
   
-  
-  * [License](#license)
+  ## Contributors
+
+  Paboba: 
+  https://github.com/Paboba
+  ## License
+
+  The Unlicense 
+
+  ![Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)<br>
